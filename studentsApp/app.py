@@ -22,7 +22,7 @@ from database import Database
 
 st.set_page_config(
     page_title=Config.APP_NAME,
-    page_icon="🎓",
+    page_icon="./students_tracking_system_logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
