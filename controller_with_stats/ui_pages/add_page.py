@@ -40,7 +40,8 @@ class AddPage:
             department=st.pills(
                 "Select Department",
                 Config.DEPARTMENTS,
-                key="add_students_department"
+                key="add_students_department",
+                wrap=True
             )
 
             batch=st.selectbox(
@@ -96,7 +97,7 @@ class AddPage:
         st.subheader("Add Subjects")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_subjects_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_subjects_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="add_subjects_batch")
             file=st.file_uploader("Upload Subjects File",type=["csv"],key="add_subjects_file")
         if not file or not department:
@@ -113,7 +114,7 @@ class AddPage:
         st.subheader("Add Materials")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_material_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_material_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="add_material_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="add_material_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="add_material_auth")
@@ -136,7 +137,7 @@ class AddPage:
         st.subheader("Add Course Curriculum")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_curriculum_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_curriculum_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="add_curriculum_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="add_curriculum_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="add_curriculum_auth")
@@ -163,7 +164,7 @@ class AddPage:
         st.subheader("Add Tasks")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_task_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="add_task_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="add_task_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="add_task_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="add_task_auth")

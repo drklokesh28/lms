@@ -31,7 +31,7 @@ class ViewPage:
         st.subheader("View Students")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_students_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_students_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="view_students_batch")
             load=st.button("Load Students",use_container_width=True,key="view_students_load")
             keep=st.toggle("Keep Data Visible",value=True,key="view_students_keep")
@@ -54,7 +54,7 @@ class ViewPage:
         st.subheader("View Subjects")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_subjects_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_subjects_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="view_subjects_batch")
         if not department:
             return
@@ -87,7 +87,7 @@ class ViewPage:
         st.subheader("View Materials")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_material_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_material_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="view_material_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="view_material_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="view_material_auth")
@@ -124,7 +124,7 @@ class ViewPage:
         st.subheader("View Course Curriculum")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_curriculum_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_curriculum_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="view_curriculum_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="view_curriculum_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="view_curriculum_auth")
@@ -156,7 +156,7 @@ class ViewPage:
         st.subheader("View Tasks")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_task_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="view_task_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="view_task_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="view_task_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="view_task_auth")

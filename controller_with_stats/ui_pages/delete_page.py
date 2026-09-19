@@ -23,7 +23,7 @@ class DeletePage:
         st.subheader("Delete Students")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_students_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_students_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="delete_students_batch")
             sections=StudentService(department).get_sections(batch) if department else []
             section=st.selectbox("Select Section",["All Sections"]+sections,key="delete_students_section")
@@ -40,7 +40,7 @@ class DeletePage:
         st.subheader("Delete Subjects")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_subjects_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_subjects_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="delete_subjects_batch")
             service=CourseService(department) if department else None
             semesters=service.get_semesters(batch) if service else []
@@ -58,7 +58,7 @@ class DeletePage:
         st.subheader("Delete Materials")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_materials_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_materials_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="delete_materials_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="delete_materials_faculty")
             load=st.button("Load Materials",use_container_width=True,key="delete_materials_load")
@@ -74,7 +74,7 @@ class DeletePage:
         st.subheader("Delete Tasks")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_tasks_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_tasks_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="delete_tasks_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="delete_tasks_faculty")
             load=st.button("Load Tasks",use_container_width=True,key="delete_tasks_load")
@@ -88,7 +88,7 @@ class DeletePage:
         st.subheader("Delete Course Curriculum")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_curriculum_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="delete_curriculum_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="delete_curriculum_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="delete_curriculum_faculty")
             faculty_service=FacultyService(department) if department else None

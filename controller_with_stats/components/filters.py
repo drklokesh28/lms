@@ -4,7 +4,7 @@ from config import Config
 class Filters:
     @staticmethod
     def department(key="department"):
-        return st.pills("Select Department",Config.DEPARTMENTS,key=key)
+        return st.pills("Select Department",Config.DEPARTMENTS,key=key,wrap=True)
 
     @staticmethod
     def batch(options=None,key="batch"):

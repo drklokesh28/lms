@@ -33,7 +33,8 @@ class EditPage:
             department=st.pills(
                 "Select Department",
                 Config.DEPARTMENTS,
-                key="edit_students_department"
+                key="edit_students_department",
+                wrap=True
             )
 
             batch=st.selectbox(
@@ -227,7 +228,7 @@ class EditPage:
         st.subheader("Edit Subjects")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_subject_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_subject_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="edit_subject_batch")
             if not department: return
             service=CourseService(department)
@@ -281,7 +282,7 @@ class EditPage:
         st.subheader("Edit Materials")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_material_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_material_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="edit_material_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="edit_material_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="edit_material_auth")
@@ -311,7 +312,7 @@ class EditPage:
         st.subheader("Edit Tasks")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_task_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_task_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="edit_task_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="edit_task_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="edit_task_auth")
@@ -342,7 +343,7 @@ class EditPage:
         st.subheader("Edit Course Curriculum")
         col1,col2=st.columns([1,2],border=True,gap="small")
         with col1:
-            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_curriculum_department")
+            department=st.pills("Select Department",Config.DEPARTMENTS,key="edit_curriculum_department",wrap=True)
             batch=st.selectbox("Select Batch",Config.BATCHES,key="edit_curriculum_batch")
             faculty_id=st.number_input("Enter Faculty ID",min_value=1,step=1,key="edit_curriculum_faculty")
             authenticate=st.button("Submit Faculty ID",use_container_width=True,key="edit_curriculum_auth")
