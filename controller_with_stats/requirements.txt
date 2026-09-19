@@ -4,3 +4,4 @@ streamlit-extras
 pymongo
 pandas
 reportlab
+streamlit-pdf-viewer
