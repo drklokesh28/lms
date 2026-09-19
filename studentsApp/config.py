@@ -6,4 +6,4 @@ class Config:
     MATERIALS_COLLECTION="materials"
     CURRICULUM_COLLECTION="course_curriculum"
     ASSIGNMENTS_SUFFIX="_assignments"
-    LOGIN_VIDEO_URL="https://www.youtube.com/watch?v=aircAruvnKk"
+    LOGIN_VIDEO_URL="https://youtu.be/fGwPmCk64DA?si=ti5oHnTCtHk5CBOe"
