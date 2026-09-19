@@ -579,7 +579,7 @@ def daily_sessions(
 
 @st.dialog(
     "Login First To Proceed",
-    width="large",
+    width="small",
     dismissible=False,
     icon="🔐"
 )
